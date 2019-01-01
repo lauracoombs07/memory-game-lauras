@@ -1,0 +1,116 @@
+html,
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 570px;
+  margin: 50px auto;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.wrapper {
+  display: grid;
+  /* 4 equal width grid track */
+  grid-template-columns: repeat(4, 1fr);
+  /* sizes the grid items that were not
+    explicitly sized by grid-template-rows(implicitly created rows) */
+  grid-auto-rows: 100px;
+  gap: 1em;
+  /* remove default ul left padding */
+  padding: 0;
+}
+
+.wrapper .card {
+  background-color: black;
+  color: grey;
+  visibility: visible;
+}
+
+.card > img {
+  width: 80%;
+  height: 80%;
+  padding: 0.5em 0.5em;
+  visibility: hidden;
+}
+
+.star {
+  width: 30px;
+  visibility: visible;
+}
+
+#restart {
+  width: 30px;
+  grid-column-start: 3;
+}
+
+.num-moves,
+.stars {
+  grid-column-start: 1;
+}
+
+.footer {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* -------- Responsive Design Section ----------- */
+@media screen and (max-width: 330px) {
+  .wrapper {
+    /* sizes the grid items that were not
+      explicitly sized by grid-template-rows(implicitly created rows) */
+    grid-auto-rows: 60px;
+    gap: 0.6em;
+  }
+
+  .card > img {
+    width: 80%;
+    height: 80%;
+    padding: 0.5em 0.5em;
+    visibility: hidden;
+  }
+
+  .star {
+    width: 20px;
+    visibility: visible;
+  }
+
+  #restart {
+    width: 20px;
+  }
+  .title {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 331px) and (max-width: 500px) {
+  .wrapper {
+    /* sizes the grid items that were not
+      explicitly sized by grid-template-rows(implicitly created rows) */
+    grid-auto-rows: 70px;
+    gap: 0.6em;
+  }
+
+  .card > img {
+    width: 80%;
+    height: 80%;
+    padding: 0.5em 0.5em;
+    visibility: hidden;
+  }
+
+  .star {
+    width: 20px;
+    visibility: visible;
+  }
+
+  #restart {
+    width: 20px;
+  }
+  .title {
+    font-size: 1.5em;
+  }
+}
